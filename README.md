@@ -10,7 +10,7 @@ Para iniciar este projeto em seu ambiente local, insira estes comandos em seu te
   
 #2 Entre no repositório
    
-   cd desafio-mbr-front
+    cd desafio-mbr-front
   
 #3 Instale as dependências
     
