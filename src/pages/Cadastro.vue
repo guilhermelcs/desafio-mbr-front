@@ -19,13 +19,15 @@
       </div>
       <Input col="12" id="complemento" type="text" label="Complemento" v-model="complemento" :isValid="true"/>
       <div class="col-12 mt-3">
+        <div v-if="error" class="alert alert-danger" role="alert">
+          Ops, this error ocurred: {{ error }}
+        </div>
         <button @click="createBrinde" v-if="telefone && telefone.length > 13 && email && telefone.length && validateEmail(email) && bairro && rua && cep && cep.length > 8 && estado && uf" class="btn btn-primary w-100">Cadastrar</button>
         <button v-else class="btn btn-primary w-100 disabled">Cadastrar</button>
       </div>
       <Modal v-if="showModal" title="Parabéns!" text="Seu cadastro foi concluído com sucesso, agora é só esperar o brinde chegar na sua casa!"/>
 
       <div class="col-12 mt-3">
-        <p v-if="error" class="mt-3">Ops, this error ocurred: {{ error }}</p>
         <router-link to="/brindes">
           <button class="btn btn-warning w-100">Ir para Listagem de Brindes</button>
         </router-link>
@@ -114,7 +116,8 @@
         error.value = e.message
         loading.value = false
         cepInvalido.value = true
-        console.log(e)
+        error = e.message
+        console.log('error', e.message)
       }
       finally {
         loading.value = false
@@ -145,11 +148,6 @@
 
     try {
       await api.post('/brindes', body)
-    }
-    catch(e) {
-      console.log('error: ', e)
-    }
-    finally {
       showModal.value = true
       telefone.value = null
       email.value = null
@@ -160,6 +158,14 @@
       cep.value = null
       estado.value = null
       uf.value = null
+    }
+    catch(e) {
+      showModal.value = false
+      error.value = e.message
+      console.log('error: ', e.message)
+    }
+    finally {
+      
     }
   }
 
