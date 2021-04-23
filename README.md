@@ -4,25 +4,18 @@ Projeto contemplando a parte do front-end do desafio da WDC: https://gist.github
 Para iniciar este projeto em seu ambiente local, insira estes comandos em seu terminal:
 
 #1 Clone o projeto
-  
-  git clone https://github.com/guilhermelcs/desafio-mbr-front.git
+    git clone https://github.com/guilhermelcs/desafio-mbr-front.git
   
 #2 Entre no repositório
+    cd desafio-mbr-front
   
-  cd desafio-mbr-front
-  
- #3 Instale as dependências
-  
-  npm i ou yarn
+#3 Instale as dependências
+    npm i ou yarn
  
- #4 Startar o projeto
-
-npm run dev
- 
- ou
- 
- yarn run dev
+#4 Startar o projeto
+    npm run dev
+    ou
+    yarn run dev
  
 Este projeto utilza o Vite como ferramenta de build
-
-https://vitejs.dev/guide/
+    https://vitejs.dev/guide/
