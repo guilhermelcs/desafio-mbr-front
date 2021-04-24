@@ -23,7 +23,13 @@ Para iniciar este projeto em seu ambiente local, insira estes comandos em seu te
     ou
     
     yarn run dev
- 
+    
+#5 Verifique se a api aponta para o back-end, faça as alterações necessárias caso precise
+    
+    Link do back-end: https://github.com/guilhermelcs/desafio-mbr-api
+    
+    Api: src / api / index.js
+   
 Este projeto utilza o Vite como ferramenta de build
     
     https://vitejs.dev/guide/
