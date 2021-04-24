@@ -41,11 +41,13 @@
 		min-height: 100vh;
 	}
 
-	section {
-		background-image: url('../assets/roubei-mesmo.svg');
-		min-height: 90vh;
-		background-repeat: no-repeat no-repeat;
-		background-position: right;
-		background-size: contain;
+	@media (min-width:1024px) {
+		section {
+			background-image: url('../assets/roubei-mesmo.svg');
+			min-height: 90vh;
+			background-repeat: no-repeat no-repeat;
+			background-position: right;
+			background-size: contain;
+		} 
 	}
 </style>

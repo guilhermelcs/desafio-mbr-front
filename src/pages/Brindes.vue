@@ -2,6 +2,7 @@
   <Page col="12" title="Brindes Salvos">
     <Input @input="getFilteredBrindes" v-model="brindeFilter" id="brindes" type="text" label="Pesquisar Brindes" col="12" :isValid="true" />
     <div class="col-12">
+      <p v-if="loading">Um segundinho, estou carregando os dados...</p>
       <div v-if="brindes && !brindeFilter.length" class="lista-brindes mb-4">
         <Table 
           v-if="brindes.data.length"
