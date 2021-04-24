@@ -116,7 +116,6 @@
         error.value = e.message
         loading.value = false
         cepInvalido.value = true
-        error = e.message
         console.log('error', e.message)
       }
       finally {
